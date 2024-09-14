@@ -2,15 +2,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 21
+      nodejs: 18
     commands:
-      - npm install -g yarn
+      - npm install -g pnpm
   pre_build:
     commands:
-      - yarn install
+      - pnpm install
   build:
     commands:
-      - yarn build
+      - pnpm build
 artifacts:
   files:
     - '**/*'
