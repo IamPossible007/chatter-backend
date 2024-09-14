@@ -13,4 +13,4 @@ phases:
       - pnpm build
 artifacts:
   files:
-    - '**/*'
+    - 'dist/**/*'
