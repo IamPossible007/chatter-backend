@@ -1,0 +1,1 @@
+{"version":3,"file":"create-chat.input.js","sourceRoot":"","sources":["../../../src/chats/dto/create-chat.input.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,6CAAmD;AACnD,qDAAuD;AAGhD,IAAM,eAAe,GAArB,MAAM,eAAe;CAK3B,CAAA;AALY,0CAAe;AAI1B;IAHC,IAAA,eAAK,GAAE;IACP,IAAA,4BAAU,GAAE;IACZ,IAAA,0BAAQ,GAAE;;6CACE;0BAJF,eAAe;IAD3B,IAAA,mBAAS,GAAE;GACC,eAAe,CAK3B"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"user-email-index.js","sourceRoot":"","sources":["../../src/migrations/user-email-index.ts"],"names":[],"mappings":";;AAEA,MAAM,CAAC,OAAO,GAAG;IACf,KAAK,CAAC,EAAE,CAAC,EAAM;QACb,MAAM,EAAE,CAAC,UAAU,CAAC,OAAO,CAAC,CAAC,WAAW,CAAC,EAAE,KAAK,EAAE,CAAC,EAAE,EAAE,EAAE,MAAM,EAAE,IAAI,EAAE,CAAC,CAAC;IAC3E,CAAC;CACF,CAAC"}
