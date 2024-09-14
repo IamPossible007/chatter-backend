@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { CreateUserInput } from './dto/create-user.input';
 import { UpdateUserInput } from './dto/update-user.input';
 import { UsersRepository } from './users.repository';
