@@ -13,6 +13,8 @@ phases:
       - pnpm build
   post_build:
     commands:
+      - cp package.json dist/
+      - cp pnpm-lock.yaml dist/
       - cp Procfile dist/
 artifacts:
   files:
