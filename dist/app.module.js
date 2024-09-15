@@ -37,13 +37,14 @@ exports.AppModule = AppModule = __decorate([
                 driver: apollo_1.ApolloDriver,
                 useFactory: (authService) => ({
                     autoSchemaFile: true,
-                    cors: true,
+                    path: '/api/graphql',
                     subscriptions: {
                         'graphql-ws': {
+                            path: '/api/graphql',
                             onConnect: (context) => {
                                 try {
                                     const request = context.extra.request;
-                                    const user = authService.verifyWs(request);
+                                    const user = authService.verifyWs(request, context.connectionParams);
                                     context.user = user;
                                 }
                                 catch (err) {

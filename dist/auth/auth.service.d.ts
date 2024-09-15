@@ -8,7 +8,7 @@ export declare class AuthService {
     private readonly configService;
     private readonly jwtService;
     constructor(configService: ConfigService, jwtService: JwtService);
-    login(user: User, response: Response): Promise<void>;
-    verifyWs(request: Request): TokenPayload;
+    login(user: User, response: Response): Promise<string>;
+    verifyWs(request: Request, connectionParams?: any): TokenPayload;
     logout(response: Response): void;
 }

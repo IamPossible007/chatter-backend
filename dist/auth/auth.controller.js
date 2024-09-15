@@ -23,7 +23,7 @@ let AuthController = class AuthController {
         this.authService = authService;
     }
     async login(user, response) {
-        await this.authService.login(user, response);
+        return this.authService.login(user, response);
     }
     logout(response) {
         this.authService.logout(response);

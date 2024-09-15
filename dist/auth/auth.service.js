@@ -13,6 +13,7 @@ exports.AuthService = void 0;
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const jwt_1 = require("@nestjs/jwt");
+const jwt_2 = require("./jwt");
 let AuthService = class AuthService {
     constructor(configService, jwtService) {
         this.configService = configService;
@@ -27,12 +28,14 @@ let AuthService = class AuthService {
             httpOnly: true,
             expires,
         });
+        return token;
     }
-    verifyWs(request) {
-        const cookies = request.headers.cookie.split('; ');
-        const authCookie = cookies.find((cookie) => cookie.includes('Authentication'));
-        const jwt = authCookie.split('Authentication=')[1];
-        return this.jwtService.verify(jwt);
+    verifyWs(request, connectionParams = {}) {
+        var _a;
+        const cookies = (_a = request.headers.cookie) === null || _a === void 0 ? void 0 : _a.split('; ');
+        const authCookie = cookies === null || cookies === void 0 ? void 0 : cookies.find((cookie) => cookie.includes('Authentication'));
+        const jwt = authCookie === null || authCookie === void 0 ? void 0 : authCookie.split('Authentication=')[1];
+        return this.jwtService.verify(jwt || (0, jwt_2.getJwt)(connectionParams.token));
     }
     logout(response) {
         response.cookie('Authentication', '', {

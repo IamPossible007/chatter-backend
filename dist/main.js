@@ -13,7 +13,7 @@ async function bootstrap() {
     app.use(cookieParser());
     app.enableCors();
     const configService = app.get(config_1.ConfigService);
-    await app.listen(configService.getOrThrow('PORT') || 8080);
+    await app.listen(configService.getOrThrow('PORT'));
 }
 bootstrap();
 //# sourceMappingURL=main.js.map
