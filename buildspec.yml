@@ -17,6 +17,10 @@ phases:
       - cp pnpm-lock.yaml dist/
       - cp Procfile dist/
       - cd dist && pnpm install --production
+      - echo "Debugging: Listing contents of current directory"
+      - ls -la
+      - echo "Debugging: Listing contents of dist directory"
+      - ls -la dist
 artifacts:
   files:
     - '**/*'
