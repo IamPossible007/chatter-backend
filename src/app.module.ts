@@ -26,10 +26,10 @@ import { AuthService } from './auth/auth.service';
       driver: ApolloDriver,
       useFactory: (authService: AuthService) => ({
         autoSchemaFile: true,
-        path: '/api/graphql',
+        path: '/graphql',
         subscriptions: {
           'graphql-ws': {
-            path: '/api/graphql',
+            path: '/graphql',
             onConnect: (context: any) => {
               try {
                 const request: Request = context.extra.request;
