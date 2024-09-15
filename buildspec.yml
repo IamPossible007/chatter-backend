@@ -13,4 +13,5 @@ phases:
       - pnpm build
 artifacts:
   files:
+    - 'package.json'
     - 'dist/**/*'
