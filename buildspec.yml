@@ -10,12 +10,13 @@ phases:
       - pnpm install
   build:
     commands:
-      - pnpm build
+      - pnpm run build
   post_build:
     commands:
       - cp package.json dist/
       - cp pnpm-lock.yaml dist/
       - cp Procfile dist/
+      - cd dist && pnpm install --production
 artifacts:
   files:
     - '**/*'
