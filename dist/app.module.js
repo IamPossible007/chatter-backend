@@ -37,6 +37,7 @@ exports.AppModule = AppModule = __decorate([
                 driver: apollo_1.ApolloDriver,
                 useFactory: (authService) => ({
                     autoSchemaFile: true,
+                    cors: true,
                     subscriptions: {
                         'graphql-ws': {
                             onConnect: (context) => {

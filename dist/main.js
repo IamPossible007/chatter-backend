@@ -11,6 +11,7 @@ async function bootstrap() {
     app.useGlobalPipes(new common_1.ValidationPipe());
     app.useLogger(app.get(nestjs_pino_1.Logger));
     app.use(cookieParser());
+    app.enableCors();
     const configService = app.get(config_1.ConfigService);
     await app.listen(configService.getOrThrow('PORT') || 8080);
 }
