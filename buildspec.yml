@@ -11,6 +11,10 @@ phases:
   build:
     commands:
       - pnpm build
+  post_build:
+    commands:
+      - cp Procfile dist/
 artifacts:
   files:
     - '**/*'
+  base-directory: 'dist'
