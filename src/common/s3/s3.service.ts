@@ -20,7 +20,7 @@ export class S3Service {
       clientConfig.credentials = {
         accessKeyId,
         secretAccessKey,
-        
+
       };
     }
 
