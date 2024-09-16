@@ -9,7 +9,7 @@ import { CorsOptions } from '@nestjs/common/interfaces/external/cors-options.int
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
   const corsOptions: CorsOptions = {
-    origin: "https://main.d3g1u3lo2fkskh.amplifyapp.com", // The URL of your frontend
+    origin: "*", // The URL of your frontend
     credentials: true,  // Allow credentials (cookies)
     methods: '*',
     allowedHeaders: '*',  // Customize as needed
